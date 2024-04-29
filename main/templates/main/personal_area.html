@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Title of the document</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="{% static 'main/css/personal_area.css' %}">
+<style>
+/* Ваши стили */
+</style>
+</head>
+<body>
+<header>
+<!-- Код для навигации -->
+</header>
+<input type="checkbox" id="menu">
+<label for="menu">
+<i class="fas fa-bars"></i>
+<i class="fas fa-times"></i>
+</label>
+<nav class="navbar">
+<ul>
+<li><a href="#Аккаунт">Аккаунт</a></li>
+<li><a href="#Внешний вид" onclick="openMenu()">Внешний вид</a></li>
+<li><a href="#Настройки">Настройки</a></li>
+</ul>
+</nav>
+<div class="container">
+<a href="{% url 'personal_area' %}" class="button"> <!-- Изменили кнопку на ссылку -->
+<img src="{% static 'main/img/1674365337_3-31.png' %}" alt="Personal Area" class="icon">
+<span class="text">Профиль</span>
+</a>
+<a href="{% url 'search' %}" class="button"> <!-- Изменили кнопку на ссылку -->
+<img src="{% static 'main/img/kisspng-computer-icons-clip-art-openclipart-magnifying-gla-5d31cfdb595331.9238955815635455633659.png' %}" alt="Поиск" class="icon">
+<span class="text">Поиск</span>
+</a>
+</div>
+<div class="avatar"></div>
+<div class="user">Пользователь</div>
+<!-- Контейнер для нового меню -->
+<div class="menu-container">
+<!-- Кнопка закрытия -->
+<span class="close-btn" onclick="closeMenu()">&times;</span>
+<div class="menu-item">
+<div class="inner"></div>
+</div>
+<div class="menu-item">
+<div class="inner"></div>
+</div>
+<div class="menu-item">
+<div class="inner"></div>
+</div>
+<div class="menu-item">
+<div class="inner"></div>
+</div>
+</div>
+<div class="login-menu">
+<div class="login">
+<div class="login-text">
+<span class="sign-in" onclick="handleSignInClick()">Sign in</span>
+</div>
+<span class="sign-up" onclick="handleSignUpClick()">Sign up</span>
+<div class="indicator"></div>
+</div>
+<!-- Отдельный элемент -->
+<div class="warning-text" id="domainWarning">Недопустимый домен электронной почты</div>
+<div class="border-element">
+<span class="email-label">Электронная почта</span>
+<input type="text" class="input-text" id="emailInput" placeholder="Введите здесь ..." oninput="checkEmailDomain(this.value)">
+</div>
+<div class="border-element password-element">
+<span class="password-label">Пароль</span>
+<input type="password" class="input-text" id="passwordInput" placeholder="Введите свой пароль ..." oninput="checkPasswordStrength(this.value)">
+<div class="password-toggle">
+    <img src="/static/main/img/free-icon-closed-eyes-5399633.png" class="closed-eyes">
+    <img src="/static/main/img/free-icon-panda-6485718.png" class="eyes">
+
+</div>
+</div>
+<a href="https://www.flaticon.com/ru/free-icons/" title="панда иконки"></a>
+<button class="button-continue">Продолжить</button>
+    <div class="border-element password-confirm-element">
+    <span class="password-confirm-label">Подтвердите пароль</span>
+    <input type="password" class="input-text" id="passwordConfirmInput" placeholder="Подтвердите свой пароль ...">
+    <div class="password-toggle">
+        <img src="/static/main/img/free-icon-closed-eyes-5399633.png" class="confirm-closed-eyes">
+        <img src="/static/main/img/free-icon-panda-6485718.png" class="confirm-eyes">
+    </div>
+</div>
+</div>
+<div class="login-form" id="loginForm" style="display: none;">
+        <!-- Здесь размещается форма входа -->
+        <span>This is login form</span>
+    </div>
+<script>
+// Функция для открытия меню авторизации
+function openLoginMenu() {
+var loginMenu = document.querySelector('.login-menu');
+loginMenu.classList.add('active');
+}
+
+// Функция для закрытия меню авторизации
+function closeLoginMenu() {
+var loginMenu = document.querySelector('.login-menu');
+loginMenu.classList.remove('active');
+}
+
+// Функция для переключения состояния меню авторизации (открыть/закрыть)
+function toggleLoginMenu() {
+var loginMenu = document.querySelector('.login-menu');
+loginMenu.classList.toggle('active');
+}
+</script>
+<div class="login-icon">
+<img src="{% static 'main/img/png-clipart-computer-icons-icon-design-others-miscellaneous-rectangle.png' %}" alt="Login" onclick="openLoginMenu()">
+</div>
+<script src="{% static 'main/JavaScript/personal_area.js' %}"></script>
+</body>
+</html>

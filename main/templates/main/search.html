@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+    <div class="container">
+        <a href="{% url 'personal_area' %}" class="button"> <!-- Изменили кнопку на ссылку -->
+            <img src="{% static 'main/img/1674365337_3-31.png' %}" alt="Personal Area" class="icon">
+            <span class="text">Профиль</span>
+        </a>
+        <button class="button">
+            <img src="{% static 'main/img/kisspng-computer-icons-clip-art-openclipart-magnifying-gla-5d31cfdb595331.9238955815635455633659.png' %}" alt="Поиск" class="icon">
+            <span class="text">Поиск</span>
+        </button>
+    </div>
+</body>
+</html>

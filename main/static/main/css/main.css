@@ -1,0 +1,86 @@
+body {
+    background: #333 !important;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    gap: 10px; /* Промежуток между элементами */
+}
+.button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    border: 3px solid springgreen; /* Основная граница - зеленая */
+    border-radius: 1rem;
+    padding: 10px;
+    flex: 1; /* Равномерное распределение пространства между кнопками */
+    margin: 0 5px; /* Добавляем небольшие отступы между кнопками */
+    max-width: 150px; /* Максимальная ширина кнопки */
+    overflow: hidden; /* Скрытие избыточной части анимации */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0); /* Начальное состояние "неонового" эффекта - отсутствие свечения */
+    transition: transform 0.5s, box-shadow 0.5s; /* Плавное изменение размера и эффекта свечения при наведении курсора */
+}
+
+.button:hover {
+    transform: scale(0.9); /* Изменение размера при наведении курсора */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8); /* Изменение эффекта свечения при наведении курсора */
+}
+
+.text {
+    margin-top: 5px; /* Отступ сверху 2rem */
+    font-weight: bold; /* Жирный текст */
+    color: white; /* Ярко белый цвет текста */
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    gap: 10px; /* Промежуток между элементами */
+}
+.button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    border: 3px solid springgreen; /* Основная граница - зеленая */
+    border-radius: 1rem;
+    padding: 10px;
+    flex: 1; /* Равномерное распределение пространства между кнопками */
+    margin: 0 5px; /* Добавляем небольшие отступы между кнопками */
+    max-width: 150px; /* Максимальная ширина кнопки */
+    overflow: hidden; /* Скрытие избыточной части анимации */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0); /* Начальное состояние "неонового" эффекта - отсутствие свечения */
+    transition: transform 0.5s, box-shadow 0.5s; /* Плавное изменение размера и эффекта свечения при наведении курсора */
+}
+
+.button:hover {
+    transform: scale(0.9); /* Изменение размера при наведении курсора */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8); /* Изменение эффекта свечения при наведении курсора */
+}
+
+.text {
+    margin-top: 5px; /* Отступ сверху 2rem */
+    font-weight: bold; /* Жирный текст */
+    color: white; /* Ярко белый цвет текста */
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
